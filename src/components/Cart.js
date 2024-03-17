@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 import QRCode from "react-qr-code";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { getFirestore } from 'firebase/firestore'; // Import necessary Firestore functions
 import firebaseApp from './FirebaseConfig';
 import BillComponent from "./bill";
 import CartItem from "./cart_item";
 import AppBar from "./AppBar";
-import { Container, Row, Col, Card, Button, CardBody } from 'react-bootstrap';
+import { Container, Row, Col, Card, CardBody } from 'react-bootstrap';
 import SuccessPopup from './SuccessPopup';
 
 export default function Basic() {

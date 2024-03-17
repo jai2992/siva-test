@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
-import { MDBCard, MDBCardBody } from 'mdb-react-ui-kit';
+// import { MDBCard, MDBCardBody } from 'mdb-react-ui-kit';
 import { addProductToCart } from './addproducttocart'; 
 import CartProduct from './cartProduct';
 import { Container, Row, Col, Card, Button, CardBody } from 'react-bootstrap';
 
 const CartItem = ({ id, initialQuantity, onDelete, updateTotalPrice, setItems, collectionName }) => {
-  const [itemQuantity, setItemQuantity] = useState(initialQuantity);
+  const [itemQuantity] = useState(initialQuantity);
 
-  const handleIncrease = () => {
-    setItemQuantity(prevQuantity => prevQuantity + 1); // Increment item quantity
-    addProductToCart(id, 1, collectionName); // Update quantity in Firestore
-    setItems(id, +1); // Update local state
-    updateTotalPrice(); // Recalculate total price
-  };
+  // const handleIncrease = () => {
+  //   setItemQuantity(prevQuantity => prevQuantity + 1); // Increment item quantity
+  //   addProductToCart(id, 1, collectionName); // Update quantity in Firestore
+  //   setItems(id, +1); // Update local state
+  //   updateTotalPrice(); // Recalculate total price
+  // };
   
-  const handleDecrease = () => {
-    if (itemQuantity > 1) {
-      setItemQuantity(prevQuantity => prevQuantity - 1); // Decrement item quantity
-      addProductToCart(id, -1, collectionName); // Update quantity in Firestore
-      setItems(id, -1); // Update local state
-      updateTotalPrice(); // Recalculate total price
-    }
-  };
+  // const handleDecrease = () => {
+  //   if (itemQuantity > 1) {
+  //     setItemQuantity(prevQuantity => prevQuantity - 1); // Decrement item quantity
+  //     addProductToCart(id, -1, collectionName); // Update quantity in Firestore
+  //     setItems(id, -1); // Update local state
+  //     updateTotalPrice(); // Recalculate total price
+  //   }
+  // };
 
   const handleDelete = () => {
     if (itemQuantity > 0) {

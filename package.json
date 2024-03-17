@@ -1,4 +1,8 @@
-{ "homepage": "https://thedarkside12.github.io/web/",
+{ "homepage": "https://parthaaaaa.github.io/firstwebapp/",
+
+"predeploy": "npm run build",
+
+"deploy": "gh-pages -d build",
   "name": "fhub",
   "version": "0.1.0",
   "private": true,

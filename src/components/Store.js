@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card} from 'react-bootstrap';
 import { getFirestore, doc, updateDoc } from 'firebase/firestore'; // Import necessary Firestore functions
 import firebaseApp from './FirebaseConfig';
 import { getDocs, collection } from 'firebase/firestore';
 import AppBar from './AppBar';
 
 const Store = () => {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
   const [items, setItems] = useState({});
   const [cartItems, setCartItems] = useState([]);
 
