@@ -11,7 +11,7 @@ import CartMain from './components/CartMain';
 const App = () => {
   return (
     <div className="App">
-    <Router>
+    <Router basename="/siva-test">
       <Routes basename="/">
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<Store />} />
